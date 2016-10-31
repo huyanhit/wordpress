@@ -1,0 +1,78 @@
+input[type='text'],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+textarea, select {
+	height: 40px;
+	padding: 0 20px;
+	color: #333;
+	border: 1px solid #ececec;
+    width: 100%;
+    line-height: normal;
+    font-weight: normal;
+}
+
+textarea {
+    height: 200px;
+    max-width: 100%;
+	padding: 10px 20px;	
+}
+
+input[type='text']:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+    border: 1px solid #337ab7;
+    background-color: inherit;
+    box-shadow: none;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+%btn{
+    border:  none;
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px 20px;
+}
+
+.btn {
+    @extend %btn;
+}
+
+input[type="submit"],
+a.btn{
+    @extend %btn;
+    background-color: #4caf50;
+    color: #fff;
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover,
+a.btn:focus,
+a.btn:hover{
+    background-color: #449d44;
+}

@@ -1,0 +1,43 @@
+/* Reset all */
+*{
+    box-sizing: border-box;
+}
+:focus {
+	outline: 0;
+}
+body {
+	line-height: $body-line-height;
+	color: $body-color;
+	font-size: $body-font-size;
+	background: $body-bg-color;
+	font-family: $body-font-family;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+a,a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+}
+
+#{headings(1,6)} {
+	margin: 20px 0;
+  	color: $headings-color;
+  	font-family: $headings-font-family;
+}

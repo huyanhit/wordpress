@@ -1,0 +1,76 @@
+/* ========= Style Main Menu ======= */
+#main-menu{
+	display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	background-color: $nav-bg-color;
+	>li{
+		position: relative;
+		float: left;
+		list-style:none;
+		>a{
+			color: $nav-color;
+			background-color: $nav-bg-color;
+			padding:0 20px;
+			line-height: 40px;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			&:hover,&:active,&:focus{
+				color:$nav-hover-color;
+				background-color:$nav-hover-bg-color;
+			}
+		}
+		&.current-menu-item,&:hover,&:active,&:focus{
+			>a{
+				color:$nav-hover-color;
+				background-color:$nav-hover-bg-color;
+			}
+		}
+		&:hover>ul{
+			display: block;
+		}
+		ul{
+			display: none;
+			left: 0;
+		    padding: 0;
+		    position: absolute;
+		    top: 40px;
+		    min-width:160px;
+		    z-index: 99;
+		    background-clip: padding-box;
+    		//border-radius: 4px;
+    		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+		    li{
+		    	display: block;
+		    	float: none;
+		    	position: relative;
+		    	//border-bottom: 1px solid #c0c0c0;
+		    	a{
+		    		display: block;
+		    		padding: 8px 15px;
+		    		text-decoration: none;
+		    		text-transform: capitalize;
+		    		color: $nav-sub-color;
+		    		background-color: $nav-sub-bg-color;
+		    		&:hover,&:active,&:focus{
+						color:$nav-sub-hover-color;
+						background-color:$nav-hover-bg-color;
+					}
+		    	}
+		    	&.current-menu-item,&:hover,&:active,&:focus{
+					> a{
+						color:$nav-sub-hover-color;
+						background-color:$nav-sub-hover-bg-color;
+					}
+				}
+				&:hover>ul{
+					display: block;
+					top: 0;
+					left: 100%;
+				}
+		    }
+		}
+	}
+}
